@@ -23,6 +23,12 @@ namespace Api.DataAccess
                 FirstName = "Nhlanhla"
             });
 
+            modelBuilder.Entity<Student>().HasData(new Student
+            {
+                StudentNumber = "21323112",
+                FirstName = "Ayanda"
+            });
+
         }
     }
 }

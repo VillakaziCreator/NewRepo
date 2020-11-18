@@ -29,8 +29,7 @@ namespace Api
         {
             services.AddControllers();
 
-            services.AddDbContext<DataAccessContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DBConnection1")));
-              //  x => x.MigrationsAssembly("Api")));
+            services.AddDbContext<DataAccessContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DBConnection1"),x => x.MigrationsAssembly("Api")));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -51,6 +50,14 @@ namespace Api
             {
                 endpoints.MapControllers();
             });
+
+            //app.UseEndpoints(endpoints =>
+            //{
+            //    endpoints.MapControllerRoute(
+            //        name: "default",
+            //        pattern: "{controller=Student}/{action=GetStudentModel}");
+            //    endpoints.MapRazorPages();
+            //});
         }
     }
 }

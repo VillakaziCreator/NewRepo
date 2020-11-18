@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Nhlanhla Vilakazi\\source\\repos\\Api\\Api\\Api.csproj": {}
+    "C:\\Users\\Nhlanhla Vilakazi\\Desktop\\Api\\Api\\Api.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Nhlanhla Vilakazi\\source\\repos\\Api\\Api\\Api.csproj": {
+    "C:\\Users\\Nhlanhla Vilakazi\\Desktop\\Api\\Api\\Api.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Nhlanhla Vilakazi\\source\\repos\\Api\\Api\\Api.csproj",
+        "projectUniqueName": "C:\\Users\\Nhlanhla Vilakazi\\Desktop\\Api\\Api\\Api.csproj",
         "projectName": "Api",
-        "projectPath": "C:\\Users\\Nhlanhla Vilakazi\\source\\repos\\Api\\Api\\Api.csproj",
+        "projectPath": "C:\\Users\\Nhlanhla Vilakazi\\Desktop\\Api\\Api\\Api.csproj",
         "packagesPath": "C:\\Users\\Nhlanhla Vilakazi\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Nhlanhla Vilakazi\\source\\repos\\Api\\Api\\obj\\",
+        "outputPath": "C:\\Users\\Nhlanhla Vilakazi\\Desktop\\Api\\Api\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Nhlanhla Vilakazi\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -42,29 +42,25 @@
           "dependencies": {
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
-              "version": "[5.0.0, )"
+              "version": "[3.1.9, )"
             },
             "Microsoft.EntityFrameworkCore.Abstractions": {
               "target": "Package",
-              "version": "[5.0.0, )"
+              "version": "[3.1.9, )"
             },
             "Microsoft.EntityFrameworkCore.Relational": {
               "target": "Package",
-              "version": "[5.0.0, )"
+              "version": "[3.1.9, )"
             },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
-              "version": "[3.1.10, )"
-            },
-            "Microsoft.EntityFrameworkCore.Sqlite": {
-              "target": "Package",
-              "version": "[3.1.10, )"
+              "version": "[3.1.9, )"
             },
             "Microsoft.EntityFrameworkCore.Tools": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[3.1.10, )"
+              "version": "[3.1.9, )"
             },
             "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
               "target": "Package",

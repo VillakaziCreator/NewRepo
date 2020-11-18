@@ -20,7 +20,7 @@ namespace Api.DataAccess
             modelBuilder.Entity<Student>().HasData(new Student
             {
                 StudentNumber = "21958451",
-                FirstName = "Nhlanhlenhle"
+                FirstName = "Nhlanhla"
             });
 
         }

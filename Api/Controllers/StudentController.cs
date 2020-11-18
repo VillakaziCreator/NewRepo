@@ -31,6 +31,12 @@ namespace Api.Controllers
                     
                 }).ToListAsync();
         }
+
+        [HttpPost]
+        public ActionResult<Student> PostStudentModel([FromForm] Student student)
+        {
+            return CreatedAtAction("GetStudentModel", new { id = student.StudentNumber }, student);
+        }
     }
 
 }

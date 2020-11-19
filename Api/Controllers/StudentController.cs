@@ -40,6 +40,20 @@ namespace Api.Controllers
             return CreatedAtAction("GetStudentModel", new { id = student.StudentNumber }, student);
         }
 
+        [HttpGet("{id}")]
+        public async Task<ActionResult<Student>> GetStudentModel(string id)
+        {
+            var studentModel = await _context.Students.FindAsync(id);
+
+            if (studentModel == null)
+            {
+                return NotFound();
+            }
+
+            return studentModel;
+
+        }
+
     }
 
 }

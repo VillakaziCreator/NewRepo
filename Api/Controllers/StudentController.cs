@@ -28,15 +28,18 @@ namespace Api.Controllers
                 {
                     StudentNumber = x.StudentNumber,
                     FirstName = x.FirstName
-                    
+
                 }).ToListAsync();
         }
 
         [HttpPost]
-        public ActionResult<Student> PostStudentModel([FromForm] Student student)
+        public async Task<ActionResult<Student>> PostStudentModel([FromForm] Student student)
         {
+            _context.Students.Add(student);
+            await _context.SaveChangesAsync();
             return CreatedAtAction("GetStudentModel", new { id = student.StudentNumber }, student);
         }
+
     }
 
 }

@@ -54,6 +54,28 @@ namespace Api.Controllers
 
         }
 
-    }
+        [HttpPut("{id}")]
+        [AcceptVerbs("POST", "PUT")]
+        public async Task<IActionResult> UpdateEmployeeModel(string id, [FromForm] Student student)
+        {
+            if (id != student.StudentNumber)
+            {
+                return BadRequest();
+            }
+            _context.Entry(student).State = EntityState.Modified;
 
+            try
+            {
+                await _context.SaveChangesAsync();
+            }
+            catch (DbUpdateConcurrencyException)
+            {
+                throw;
+            }
+
+            return Ok();
+
+        }
+
+    }
 }

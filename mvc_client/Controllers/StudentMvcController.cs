@@ -5,6 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net.Http;
+using System.Text;
 using System.Threading.Tasks;
 
 namespace mvc_client.Controllers
@@ -25,6 +26,24 @@ namespace mvc_client.Controllers
             return View(studentList);
         }
 
+        public ViewResult AddStudent() => View();
+
+        [HttpPost]
+        public async Task<IActionResult> AddStudent(StudentMvcModel student)
+        {
+            StudentMvcModel receivedStudent = new StudentMvcModel();
+            using (var httpClient = new HttpClient())
+            {
+                StringContent content = new StringContent(JsonConvert.SerializeObject(student), Encoding.UTF8, "application/json");
+                using (var response = await httpClient.PostAsync("https://localhost:44364/api/Student", content))
+                {
+                    string apiResponse = await response.Content.ReadAsStringAsync();
+                    receivedStudent = JsonConvert.DeserializeObject<StudentMvcModel>(apiResponse);
+                }
+            }
+            return RedirectToAction(nameof(Index));
+        }
 
     }
 }
+

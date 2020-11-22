@@ -14,6 +14,7 @@ namespace mvc_client
         public static void Main(string[] args)
         {
             CreateHostBuilder(args).Build().Run();
+
         }
 
         public static IHostBuilder CreateHostBuilder(string[] args) =>
@@ -22,5 +23,7 @@ namespace mvc_client
                 {
                     webBuilder.UseStartup<Startup>();
                 });
+
+
     }
 }

@@ -62,7 +62,7 @@ namespace mvc_client
             {
                 endpoints.MapControllerRoute(
                     name: "default",
-                    pattern: "{controller=Home}/{action=Index}/{id?}");
+                    pattern: "{controller=StudentMvc}/{action=Index}/{id?}");
                 endpoints.MapRazorPages();
             });
         }

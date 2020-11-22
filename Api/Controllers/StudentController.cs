@@ -55,7 +55,7 @@ namespace Api.Controllers
         }
 
         [HttpPut("{id}")]
-        [AcceptVerbs("POST", "PUT")]
+        [AcceptVerbs("PUT")]
         public async Task<IActionResult> UpdateEmployeeModel(string id, [FromForm] Student student)
         {
             if (id != student.StudentNumber)

@@ -41,6 +41,9 @@ namespace mvc_client.Controllers
                     receivedStudent = JsonConvert.DeserializeObject<StudentMvcModel>(apiResponse);
                 }
             }
+
+            // ModelState.AddModelError(string.Empty, "Server Error. Please contact administrator.");
+
             return RedirectToAction(nameof(Index));
         }
 

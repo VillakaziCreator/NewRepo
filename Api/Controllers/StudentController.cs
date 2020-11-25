@@ -33,7 +33,7 @@ namespace Api.Controllers
         }
 
         [HttpPost]
-        public async Task<ActionResult<Student>> PostStudentModel([FromForm] Student student)
+        public async Task<ActionResult<Student>> PostStudentModel([FromBody] Student student)
         {
             _context.Students.Add(student);
             await _context.SaveChangesAsync();

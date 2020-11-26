@@ -55,10 +55,10 @@ namespace Api.Controllers
         }
 
         [HttpPut("{id}")]
-        [AcceptVerbs("PUT")]
-        public async Task<IActionResult> UpdateEmployeeModel(string id, [FromForm] Student student)
+        [AcceptVerbs("PUT","POST")]
+        public async Task<IActionResult> UpdateStudentModel([FromForm] Student student)
         {
-            if (id != student.StudentNumber)
+            if (student.StudentNumber == null)
             {
                 return BadRequest();
             }
@@ -75,6 +75,21 @@ namespace Api.Controllers
 
             return Ok();
 
+        }
+
+        [HttpDelete("{id}")]
+        public async Task<ActionResult<Student>> DeleteStudent(string id)
+        {
+            var student = await _context.Students.FindAsync(id);
+
+            if (student == null)
+            {
+                return NotFound();
+            }
+            _context.Students.Remove(student);
+            await _context.SaveChangesAsync();
+
+            return student;
         }
 
     }

@@ -1,4 +1,3 @@
-C:\Users\Nhlanhla Vilakazi\Desktop\Api\mvc_client\obj\Debug\netcoreapp3.1\mvc_client.csprojAssemblyReference.cache
 C:\Users\Nhlanhla Vilakazi\Desktop\Api\mvc_client\obj\Debug\netcoreapp3.1\mvc_client.AssemblyInfoInputs.cache
 C:\Users\Nhlanhla Vilakazi\Desktop\Api\mvc_client\obj\Debug\netcoreapp3.1\mvc_client.AssemblyInfo.cs
 C:\Users\Nhlanhla Vilakazi\Desktop\Api\mvc_client\obj\Debug\netcoreapp3.1\mvc_client.csproj.CoreCompileInputs.cache
@@ -164,3 +163,4 @@ C:\Users\Nhlanhla Vilakazi\Desktop\Api\mvc_client\obj\Debug\netcoreapp3.1\mvc_cl
 C:\Users\Nhlanhla Vilakazi\Desktop\Api\mvc_client\obj\Debug\netcoreapp3.1\mvc_client.dll
 C:\Users\Nhlanhla Vilakazi\Desktop\Api\mvc_client\obj\Debug\netcoreapp3.1\mvc_client.pdb
 C:\Users\Nhlanhla Vilakazi\Desktop\Api\mvc_client\obj\Debug\netcoreapp3.1\mvc_client.genruntimeconfig.cache
+C:\Users\Nhlanhla Vilakazi\Desktop\Api\mvc_client\obj\Debug\netcoreapp3.1\Razor\Views\StudentMvc\UpdateStudent.cshtml.g.cs

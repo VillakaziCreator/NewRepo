@@ -15,20 +15,8 @@ namespace Api.DataAccess
 
         public DbSet<Student> Students { get; set; }
 
-        protected override void OnModelCreating(ModelBuilder modelBuilder)
-        {
-            modelBuilder.Entity<Student>().HasData(new Student
-            {
-                StudentNumber = "21958451",
-                FirstName = "Nhlanhla"
-            });
+        public DbSet<Course> Courses { get; set; }
+        
 
-            modelBuilder.Entity<Student>().HasData(new Student
-            {
-                StudentNumber = "21323112",
-                FirstName = "Ayanda"
-            });
-
-        }
     }
 }

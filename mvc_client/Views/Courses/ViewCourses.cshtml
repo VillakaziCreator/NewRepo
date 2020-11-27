@@ -1,0 +1,53 @@
+﻿@model IEnumerable<mvc_client.Models.CourseMvcModel>
+
+@{
+    ViewData["Title"] = "ViewCourses";
+}
+
+<h4>All Courses</h4>
+
+<p>
+    <a asp-action="Create">Insert Course</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.CourseID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Description)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CoursePath)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NumberOfStudents)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.CourseID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Description)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CoursePath)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NumberOfStudents)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

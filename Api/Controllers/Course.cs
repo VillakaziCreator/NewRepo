@@ -24,7 +24,7 @@ namespace Api.Controllers
 
 
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<CourseModel>>> GetAllCourses()
+        public async Task<ActionResult<IEnumerable<Model.CourseModel>>> GetAllCourses()
         {
             return await _context.Courses
                 .Select(x => new CourseModel()
@@ -35,5 +35,41 @@ namespace Api.Controllers
                     NumberOfStudents = x.NumberOfStudents
                 }).ToListAsync();
         }
+
+        [HttpGet("{id}")]
+        public async Task<ActionResult<CourseModel>> GetCourseById(string id)
+        {
+            var course = await _context.Courses.FindAsync(id);
+
+            if (course == null)
+                return NotFound();
+
+            return course;
+        }
+
+        [HttpPut("{id}")]
+        [AcceptVerbs("PUT","POST")]
+        public async Task<IActionResult> UpdateCourse([FromForm] CourseModel course)
+        {
+            if (course.CourseID == null)
+            {
+                return BadRequest();
+            }
+
+            _context.Entry(course).State = EntityState.Modified;
+
+            try
+            {
+                await _context.SaveChangesAsync();
+            }
+            catch (DbUpdateConcurrencyException)
+            {
+                throw;
+            }
+
+            return Ok();
+        }
+
+
     }
 }

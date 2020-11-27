@@ -55,8 +55,8 @@ namespace Api.Controllers
         }
 
         [HttpPut("{id}")]
-        [AcceptVerbs("PUT","POST")]
-        public async Task<IActionResult> UpdateStudentModel([FromForm] Student student)
+        [AcceptVerbs("PUT")]
+        public async Task<IActionResult> UpdateStudentModel([FromBody] Student student)
         {
             if (student.StudentNumber == null)
             {

@@ -24,7 +24,7 @@ namespace Api.Controllers
 
 
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Model.CourseModel>>> GetAllCourses()
+        public async Task<ActionResult<IEnumerable<CourseModel>>> GetAllCourses()
         {
             return await _context.Courses
                 .Select(x => new CourseModel()

@@ -1,0 +1,4 @@
+C:\Users\Nhlanhla Vilakazi\Desktop\Api\ModelsCorev1.0\obj\Debug\netcoreapp3.1\ModelsCorev1.0.csprojAssemblyReference.cache
+C:\Users\Nhlanhla Vilakazi\Desktop\Api\ModelsCorev1.0\obj\Debug\netcoreapp3.1\ModelsCorev1.0.AssemblyInfoInputs.cache
+C:\Users\Nhlanhla Vilakazi\Desktop\Api\ModelsCorev1.0\obj\Debug\netcoreapp3.1\ModelsCorev1.0.AssemblyInfo.cs
+C:\Users\Nhlanhla Vilakazi\Desktop\Api\ModelsCorev1.0\obj\Debug\netcoreapp3.1\ModelsCorev1.0.csproj.CoreCompileInputs.cache

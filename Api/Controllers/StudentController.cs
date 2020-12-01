@@ -1,10 +1,8 @@
-﻿using Api.DataAccess;
-using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using System;
+using Models.Student;
+using ServicesCorev1._0.StudentService;
 using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 
 namespace Api.Controllers
@@ -13,83 +11,67 @@ namespace Api.Controllers
     [ApiController]
     public class StudentController : ControllerBase
     {
-        private readonly DataAccessContext _context;
+        private readonly IStudentInterface _studentService;
 
-        public StudentController(DataAccessContext context)
+        public StudentController(IStudentInterface studentService)
         {
-            _context = context;
+            _studentService = studentService;
         }
 
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Student>>> GetStudentModel()
+        public async Task<ActionResult<IEnumerable<StudentModel>>> GetStudentModel()
         {
-            return await _context.Students
-                .Select(x => new Student()
-                {
-                    StudentNumber = x.StudentNumber,
-                    FirstName = x.FirstName
-
-                }).ToListAsync();
+            return _studentService.GetAllStudents();
         }
 
         [HttpPost]
-        public async Task<ActionResult<Student>> PostStudentModel([FromBody] Student student)
+        public async Task<ActionResult<StudentModel>> PostStudentModel([FromBody] StudentModel student)
         {
-            _context.Students.Add(student);
-            await _context.SaveChangesAsync();
-            return CreatedAtAction("GetStudentModel", new { id = student.StudentNumber }, student);
+            StudentModel student_ = _studentService.AddStudent(student);
+            return student_;
+            ///return CreatedAtAction("GetStudentModel", new { id = student.StudentNumber }, student);
         }
 
         [HttpGet("{id}")]
-        public async Task<ActionResult<Student>> GetStudentModel(string id)
+        public async Task<ActionResult<StudentModel>> GetStudentModel(int id)
         {
-            var studentModel = await _context.Students.FindAsync(id);
+            StudentModel studentModel = _studentService.FindStudentById(id);
 
-            if (studentModel == null)
-            {
-                return NotFound();
-            }
-
-            return studentModel;
-
+            return studentModel == null ? NotFound() : (ActionResult<StudentModel>)studentModel;
         }
 
         [HttpPut("{id}")]
         [AcceptVerbs("PUT")]
-        public async Task<IActionResult> UpdateStudentModel([FromBody] Student student)
+        public ActionResult<StudentModel> UpdateStudentModel([FromBody] StudentModel student)
         {
-            if (student.StudentNumber == null)
-            {
-                return BadRequest();
-            }
-            _context.Entry(student).State = EntityState.Modified;
-
             try
             {
-                await _context.SaveChangesAsync();
+                if (student == null)
+                {
+                    return BadRequest();
+                }
+                StudentModel _student = _studentService.UpdateStudent(student);
             }
             catch (DbUpdateConcurrencyException)
             {
                 throw;
             }
 
-            return Ok();
+            return student;
 
         }
 
         [HttpDelete("{id}")]
-        public async Task<ActionResult<Student>> DeleteStudent(string id)
+        public ActionResult<StudentModel> DeleteStudent(string id)
         {
-            var student = await _context.Students.FindAsync(id);
-
-            if (student == null)
-            {
-                return NotFound();
-            }
-            _context.Students.Remove(student);
-            await _context.SaveChangesAsync();
-
-            return student;
+            //if (id == null)
+            //{
+            //    return NotFound();
+            //}
+            //else
+            //{
+            return _studentService.DeleteStudent(id);
+            // }
         }
 
     }

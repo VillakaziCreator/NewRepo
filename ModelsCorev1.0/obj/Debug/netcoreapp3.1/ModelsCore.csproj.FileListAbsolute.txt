@@ -1,0 +1,8 @@
+C:\Users\Nhlanhla Vilakazi\Desktop\Api\ModelsCorev1.0\bin\Debug\netcoreapp3.1\ModelsCore.deps.json
+C:\Users\Nhlanhla Vilakazi\Desktop\Api\ModelsCorev1.0\bin\Debug\netcoreapp3.1\ModelsCore.dll
+C:\Users\Nhlanhla Vilakazi\Desktop\Api\ModelsCorev1.0\bin\Debug\netcoreapp3.1\ModelsCore.pdb
+C:\Users\Nhlanhla Vilakazi\Desktop\Api\ModelsCorev1.0\obj\Debug\netcoreapp3.1\ModelsCore.AssemblyInfoInputs.cache
+C:\Users\Nhlanhla Vilakazi\Desktop\Api\ModelsCorev1.0\obj\Debug\netcoreapp3.1\ModelsCore.AssemblyInfo.cs
+C:\Users\Nhlanhla Vilakazi\Desktop\Api\ModelsCorev1.0\obj\Debug\netcoreapp3.1\ModelsCore.csproj.CoreCompileInputs.cache
+C:\Users\Nhlanhla Vilakazi\Desktop\Api\ModelsCorev1.0\obj\Debug\netcoreapp3.1\ModelsCore.dll
+C:\Users\Nhlanhla Vilakazi\Desktop\Api\ModelsCorev1.0\obj\Debug\netcoreapp3.1\ModelsCore.pdb

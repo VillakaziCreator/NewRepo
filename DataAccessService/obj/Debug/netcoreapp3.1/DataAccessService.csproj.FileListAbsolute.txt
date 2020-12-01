@@ -1,0 +1,11 @@
+C:\Users\Nhlanhla Vilakazi\Desktop\Api\DataAccessService\bin\Debug\netcoreapp3.1\DataAccessService.deps.json
+C:\Users\Nhlanhla Vilakazi\Desktop\Api\DataAccessService\bin\Debug\netcoreapp3.1\DataAccessService.runtimeconfig.json
+C:\Users\Nhlanhla Vilakazi\Desktop\Api\DataAccessService\bin\Debug\netcoreapp3.1\DataAccessService.runtimeconfig.dev.json
+C:\Users\Nhlanhla Vilakazi\Desktop\Api\DataAccessService\bin\Debug\netcoreapp3.1\DataAccessService.dll
+C:\Users\Nhlanhla Vilakazi\Desktop\Api\DataAccessService\bin\Debug\netcoreapp3.1\DataAccessService.pdb
+C:\Users\Nhlanhla Vilakazi\Desktop\Api\DataAccessService\obj\Debug\netcoreapp3.1\DataAccessService.AssemblyInfoInputs.cache
+C:\Users\Nhlanhla Vilakazi\Desktop\Api\DataAccessService\obj\Debug\netcoreapp3.1\DataAccessService.AssemblyInfo.cs
+C:\Users\Nhlanhla Vilakazi\Desktop\Api\DataAccessService\obj\Debug\netcoreapp3.1\DataAccessService.csproj.CoreCompileInputs.cache
+C:\Users\Nhlanhla Vilakazi\Desktop\Api\DataAccessService\obj\Debug\netcoreapp3.1\DataAccessService.dll
+C:\Users\Nhlanhla Vilakazi\Desktop\Api\DataAccessService\obj\Debug\netcoreapp3.1\DataAccessService.pdb
+C:\Users\Nhlanhla Vilakazi\Desktop\Api\DataAccessService\obj\Debug\netcoreapp3.1\DataAccessService.genruntimeconfig.cache

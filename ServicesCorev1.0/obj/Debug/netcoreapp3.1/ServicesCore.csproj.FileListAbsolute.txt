@@ -1,0 +1,14 @@
+C:\Users\Nhlanhla Vilakazi\Desktop\Api\ServicesCorev1.0\bin\Debug\netcoreapp3.1\ServicesCore.deps.json
+C:\Users\Nhlanhla Vilakazi\Desktop\Api\ServicesCorev1.0\bin\Debug\netcoreapp3.1\ServicesCore.dll
+C:\Users\Nhlanhla Vilakazi\Desktop\Api\ServicesCorev1.0\bin\Debug\netcoreapp3.1\ServicesCore.pdb
+C:\Users\Nhlanhla Vilakazi\Desktop\Api\ServicesCorev1.0\bin\Debug\netcoreapp3.1\DataAccessService.dll
+C:\Users\Nhlanhla Vilakazi\Desktop\Api\ServicesCorev1.0\bin\Debug\netcoreapp3.1\ModelsCore.dll
+C:\Users\Nhlanhla Vilakazi\Desktop\Api\ServicesCorev1.0\bin\Debug\netcoreapp3.1\DataAccessService.pdb
+C:\Users\Nhlanhla Vilakazi\Desktop\Api\ServicesCorev1.0\bin\Debug\netcoreapp3.1\ModelsCore.pdb
+C:\Users\Nhlanhla Vilakazi\Desktop\Api\ServicesCorev1.0\obj\Debug\netcoreapp3.1\ServicesCore.csprojAssemblyReference.cache
+C:\Users\Nhlanhla Vilakazi\Desktop\Api\ServicesCorev1.0\obj\Debug\netcoreapp3.1\ServicesCore.AssemblyInfoInputs.cache
+C:\Users\Nhlanhla Vilakazi\Desktop\Api\ServicesCorev1.0\obj\Debug\netcoreapp3.1\ServicesCore.AssemblyInfo.cs
+C:\Users\Nhlanhla Vilakazi\Desktop\Api\ServicesCorev1.0\obj\Debug\netcoreapp3.1\ServicesCore.csproj.CoreCompileInputs.cache
+C:\Users\Nhlanhla Vilakazi\Desktop\Api\ServicesCorev1.0\obj\Debug\netcoreapp3.1\ServicesCore.csproj.CopyComplete
+C:\Users\Nhlanhla Vilakazi\Desktop\Api\ServicesCorev1.0\obj\Debug\netcoreapp3.1\ServicesCore.dll
+C:\Users\Nhlanhla Vilakazi\Desktop\Api\ServicesCorev1.0\obj\Debug\netcoreapp3.1\ServicesCore.pdb

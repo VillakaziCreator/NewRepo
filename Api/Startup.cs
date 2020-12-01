@@ -1,17 +1,13 @@
-using Api.DataAccess;
+using DataAccessService.DataAccess;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using ServicesCore.Student;
+using ServicesCorev1._0.CourseService;
+using ServicesCorev1._0.StudentService;
 
 namespace Api
 {
@@ -28,8 +24,13 @@ namespace Api
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
+            IServiceCollection serviceCollections = services.AddDbContext<DataAccessContext>(options => 
+            options.UseSqlServer(Configuration.GetConnectionString("DBConnection1"),
+                x => x.MigrationsAssembly("DataAccessService")));
 
-            services.AddDbContext<DataAccessContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DBConnection1"),x => x.MigrationsAssembly("Api")));
+            services.AddScoped<IStudentInterface, StudentImplementation>();
+            services.AddScoped<ICourseInterface, CourseImplementation>();
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

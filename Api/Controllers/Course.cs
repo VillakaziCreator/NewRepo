@@ -1,12 +1,9 @@
-﻿using Api.DataAccess;
-using Api.Model;
-using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
+using System.Collections.Generic;
+using ModelsCore.CourseModelCore;
+using ServicesCorev1._0.CourseService;
 
 namespace Api.Controllers
 {
@@ -14,60 +11,53 @@ namespace Api.Controllers
     [ApiController]
     public class Course : ControllerBase
     {
-        private readonly DataAccessContext _context;
+        private readonly ICourseInterface _courseInterface;
 
 
-        public Course(DataAccessContext context)
+        public Course(ICourseInterface courseInterface)
         {
-            _context = context;    
+            _courseInterface = courseInterface;
         }
 
 
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<CourseModel>>> GetAllCourses()
+        public ActionResult<IEnumerable<CourseModel>> GetAllCourses()
         {
-            return await _context.Courses
-                .Select(x => new CourseModel()
-                {
-                    CourseID = x.CourseID,
-                    Description = x.Description,
-                    CoursePath = x.CoursePath,
-                    NumberOfStudents = x.NumberOfStudents
-                }).ToListAsync();
+            return _courseInterface.GetAllCourses();
         }
 
         [HttpGet("{id}")]
-        public async Task<ActionResult<CourseModel>> GetCourseById(string id)
+        public async Task<ActionResult<CourseModel>> GetCourseById(int id)
         {
-            var course = await _context.Courses.FindAsync(id);
+            CourseModel course = _courseInterface.FindCourseById(id);
+            return course == null ? NotFound() : (ActionResult<CourseModel>)course;
+        }
 
-            if (course == null)
-                return NotFound();
-
-            return course;
+        [HttpPost]
+        public async Task<ActionResult<CourseModel>> PostCourse([FromBody] CourseModel course)
+        {
+            CourseModel courseModel = _courseInterface.AddCourse(course);
+            return CreatedAtAction("GetAllCourses", new { id = courseModel.CourseID }, courseModel);
         }
 
         [HttpPut("{id}")]
-        [AcceptVerbs("PUT","POST")]
-        public async Task<IActionResult> UpdateCourse([FromForm] CourseModel course)
+        [AcceptVerbs("PUT")]
+        public ActionResult<CourseModel> UpdateCourse([FromForm] CourseModel course)
         {
-            if (course.CourseID == null)
-            {
-                return BadRequest();
-            }
-
-            _context.Entry(course).State = EntityState.Modified;
-
             try
             {
-                await _context.SaveChangesAsync();
+                if (course.CourseID == null)
+                {
+                    return BadRequest();
+                }
+                string a = _courseInterface.UpdateCourse(course);
             }
             catch (DbUpdateConcurrencyException)
             {
                 throw;
             }
 
-            return Ok();
+            return course;
         }
 
 

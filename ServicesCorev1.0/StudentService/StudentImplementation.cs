@@ -1,6 +1,7 @@
 ﻿using DataAccessService.DataAccess;
 using Models.Student;
 using ServicesCorev1._0.StudentService;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -36,12 +37,12 @@ namespace ServicesCore.Student
 
         public StudentModel DeleteStudent(string id)
         {
-            throw new System.NotImplementedException();
+            throw new NotImplementedException();
         }
 
         public StudentModel FindStudentById(int Id)
         {
-            throw new System.NotImplementedException();
+            throw new NotImplementedException();
         }
 
         public List<StudentModel> GetAllStudents()
@@ -58,7 +59,25 @@ namespace ServicesCore.Student
 
         public StudentModel UpdateStudent(StudentModel model)
         {
-            throw new System.NotImplementedException();
+            try
+            {
+                //using (dbcontext)
+                //{
+                DataAccessService.DataAccess.Student student = dbcontext.Students.Find(model.StudentNumber);
+
+                student.StudentNumber = model.StudentNumber;
+                student.FirstName = model.FirstName;
+
+                dbcontext.Students.Update(student);
+                dbcontext.SaveChanges();
+
+                return model;
+                //};
+            }
+            catch (Exception)
+            {
+                throw;
+            }
         }
     }
 }

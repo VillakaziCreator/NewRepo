@@ -4,6 +4,7 @@ using System.Threading.Tasks;
 using System.Collections.Generic;
 using ModelsCore.CourseModelCore;
 using ServicesCorev1._0.CourseService;
+using System;
 
 namespace Api.Controllers
 {
@@ -27,21 +28,23 @@ namespace Api.Controllers
         }
 
         [HttpGet("{id}")]
-        public async Task<ActionResult<CourseModel>> GetCourseById(int id)
+        public async Task<ActionResult<CourseModel>> GetCourseById(string id)
         {
             CourseModel course = _courseInterface.FindCourseById(id);
-            return course == null ? NotFound() : (ActionResult<CourseModel>)course;
+            if (course == null)
+                return NotFound();
+            return course;
         }
 
         [HttpPost]
         public async Task<ActionResult<CourseModel>> PostCourse([FromBody] CourseModel course)
         {
             CourseModel courseModel = _courseInterface.AddCourse(course);
-            return CreatedAtAction("GetAllCourses", new { id = courseModel.CourseID }, courseModel);
+            return courseModel;
         }
 
-        [HttpPut("{id}")]
-        [AcceptVerbs("PUT")]
+        /*[HttpPut("{id}")]
+        [AcceptVerbs("PUT","POST")]
         public ActionResult<CourseModel> UpdateCourse([FromForm] CourseModel course)
         {
             try
@@ -51,14 +54,38 @@ namespace Api.Controllers
                     return BadRequest();
                 }
                 string a = _courseInterface.UpdateCourse(course);
+                return Ok();
             }
             catch (DbUpdateConcurrencyException)
             {
                 throw;
             }
 
-            return course;
+        }*/
+
+        [HttpPut("{id}")]
+        [AcceptVerbs("POST", "PUT")]
+        public ActionResult<CourseModel> UpdateCourse(string id, CourseModel model)
+        {
+            try
+            {
+                if ((model == null) || (model.CourseID == ""))
+                {
+                    return NotFound();
+                }
+                _courseInterface.UpdateCourse(model);
+                return model;
+
+            }
+            catch (Exception)
+            {
+                
+                 throw;
+                
+            }
+            
         }
+
 
 
     }

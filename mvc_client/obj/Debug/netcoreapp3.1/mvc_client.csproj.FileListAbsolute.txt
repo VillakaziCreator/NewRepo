@@ -132,6 +132,7 @@ C:\Users\Nhlanhla Vilakazi\Desktop\Api\mvc_client\bin\Debug\netcoreapp3.1\runtim
 C:\Users\Nhlanhla Vilakazi\Desktop\Api\mvc_client\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.0\System.Runtime.Caching.dll
 C:\Users\Nhlanhla Vilakazi\Desktop\Api\mvc_client\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.0\System.Runtime.Caching.dll
 C:\Users\Nhlanhla Vilakazi\Desktop\Api\mvc_client\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\Nhlanhla Vilakazi\Desktop\Api\mvc_client\obj\Debug\netcoreapp3.1\mvc_client.csprojAssemblyReference.cache
 C:\Users\Nhlanhla Vilakazi\Desktop\Api\mvc_client\obj\Debug\netcoreapp3.1\mvc_client.AssemblyInfoInputs.cache
 C:\Users\Nhlanhla Vilakazi\Desktop\Api\mvc_client\obj\Debug\netcoreapp3.1\mvc_client.AssemblyInfo.cs
 C:\Users\Nhlanhla Vilakazi\Desktop\Api\mvc_client\obj\Debug\netcoreapp3.1\mvc_client.csproj.CoreCompileInputs.cache
@@ -148,6 +149,7 @@ C:\Users\Nhlanhla Vilakazi\Desktop\Api\mvc_client\obj\Debug\netcoreapp3.1\mvc_cl
 C:\Users\Nhlanhla Vilakazi\Desktop\Api\mvc_client\obj\Debug\netcoreapp3.1\Razor\Areas\Identity\Pages\_ViewStart.cshtml.g.cs
 C:\Users\Nhlanhla Vilakazi\Desktop\Api\mvc_client\obj\Debug\netcoreapp3.1\Razor\Views\CourseMvc\GetAllCourses.cshtml.g.cs
 C:\Users\Nhlanhla Vilakazi\Desktop\Api\mvc_client\obj\Debug\netcoreapp3.1\Razor\Views\CourseMvc\NewCourse.cshtml.g.cs
+C:\Users\Nhlanhla Vilakazi\Desktop\Api\mvc_client\obj\Debug\netcoreapp3.1\Razor\Views\CourseMvc\UpdateCourse.cshtml.g.cs
 C:\Users\Nhlanhla Vilakazi\Desktop\Api\mvc_client\obj\Debug\netcoreapp3.1\Razor\Views\Home\Index.cshtml.g.cs
 C:\Users\Nhlanhla Vilakazi\Desktop\Api\mvc_client\obj\Debug\netcoreapp3.1\Razor\Views\Home\Privacy.cshtml.g.cs
 C:\Users\Nhlanhla Vilakazi\Desktop\Api\mvc_client\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Error.cshtml.g.cs

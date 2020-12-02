@@ -6,7 +6,7 @@ namespace ServicesCorev1._0.CourseService
     public interface ICourseInterface
     {
         CourseModel AddCourse(CourseModel model);
-        CourseModel FindCourseById(int Id);
+        CourseModel FindCourseById(string id);
         List<CourseModel> GetAllCourses();
         string UpdateCourse(CourseModel model);
         CourseModel DeleteCourse(string id);

@@ -24,12 +24,13 @@ namespace Api
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
-            IServiceCollection serviceCollections = services.AddDbContext<DataAccessContext>(options => 
+            IServiceCollection serviceCollections = services.AddDbContext<DataAccessContext>(options =>
             options.UseSqlServer(Configuration.GetConnectionString("DBConnection1"),
                 x => x.MigrationsAssembly("DataAccessService")));
 
             services.AddScoped<IStudentInterface, StudentImplementation>();
             services.AddScoped<ICourseInterface, CourseImplementation>();
+
 
         }
 

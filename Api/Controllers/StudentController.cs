@@ -42,7 +42,7 @@ namespace Api.Controllers
 
         [HttpPut("{id}")]
         [AcceptVerbs("PUT")]
-        public ActionResult<StudentModel> UpdateStudentModel([FromBody] StudentModel student)
+        public ActionResult<StudentModel> UpdateStudentModel([FromForm] StudentModel student)
         {
             try
             {

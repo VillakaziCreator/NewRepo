@@ -157,6 +157,8 @@ C:\Users\Nhlanhla Vilakazi\Desktop\Api\Api\bin\Debug\netcoreapp3.1\Api.runtimeco
 C:\Users\Nhlanhla Vilakazi\Desktop\Api\Api\bin\Debug\netcoreapp3.1\Api.runtimeconfig.dev.json
 C:\Users\Nhlanhla Vilakazi\Desktop\Api\Api\bin\Debug\netcoreapp3.1\Api.dll
 C:\Users\Nhlanhla Vilakazi\Desktop\Api\Api\bin\Debug\netcoreapp3.1\Api.pdb
+C:\Users\Nhlanhla Vilakazi\Desktop\Api\Api\bin\Debug\netcoreapp3.1\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\Nhlanhla Vilakazi\Desktop\Api\Api\bin\Debug\netcoreapp3.1\Microsoft.Bcl.HashCode.dll
 C:\Users\Nhlanhla Vilakazi\Desktop\Api\Api\bin\Debug\netcoreapp3.1\Microsoft.Data.SqlClient.dll
 C:\Users\Nhlanhla Vilakazi\Desktop\Api\Api\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.dll
 C:\Users\Nhlanhla Vilakazi\Desktop\Api\Api\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Abstractions.dll
@@ -194,5 +196,3 @@ C:\Users\Nhlanhla Vilakazi\Desktop\Api\Api\obj\Debug\netcoreapp3.1\Api.csproj.Co
 C:\Users\Nhlanhla Vilakazi\Desktop\Api\Api\obj\Debug\netcoreapp3.1\Api.dll
 C:\Users\Nhlanhla Vilakazi\Desktop\Api\Api\obj\Debug\netcoreapp3.1\Api.pdb
 C:\Users\Nhlanhla Vilakazi\Desktop\Api\Api\obj\Debug\netcoreapp3.1\Api.genruntimeconfig.cache
-C:\Users\Nhlanhla Vilakazi\Desktop\Api\Api\bin\Debug\netcoreapp3.1\Microsoft.Bcl.AsyncInterfaces.dll
-C:\Users\Nhlanhla Vilakazi\Desktop\Api\Api\bin\Debug\netcoreapp3.1\Microsoft.Bcl.HashCode.dll

@@ -1,4 +1,16 @@
 ﻿[*.cs]
 
 # Default severity for all analyzer diagnostics
-dotnet_analyzer_diagnostic.severity = error
+dotnet_analyzer_diagnostic.severity = silent
+
+# IDE0008: Use explicit type
+dotnet_diagnostic.IDE0008.severity = silent
+
+# IDE0063: Use simple 'using' statement
+dotnet_diagnostic.IDE0063.severity = none
+
+# IDE0011: Add braces
+dotnet_diagnostic.IDE0011.severity = silent
+
+# IDE0011: Add braces
+csharp_prefer_braces = when_multiline:silent
